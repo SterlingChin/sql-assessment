@@ -1,0 +1,28 @@
+insert into Users (id, firstname, lastname, email) values (3, 'Jane', 'Janis', 'Jane@Janis.com');
+insert into Vehicles (make, model, year, ownerId) values ('Toyota', 'Camry', 1991, 1);
+insert into Vehicles (make, model, year, ownerId) values ('Honda', 'Civic', 1995, 1);
+insert into Vehicles (make, model, year, ownerId) values ('Ford', 'Focus', 2005, 1);
+insert into Vehicles (make, model, year, ownerId) values ('Ford', 'Taurus', 2003, 2);
+insert into Vehicles (make, model, year, ownerId) values ('VW', 'Bug', 2010, 2);
+insert into Vehicles (make, model, year, ownerId) values ('Mini', 'Coup', 2013, 3);
+
+
+ALTER TABLE Vehicles ALTER COLUMN id TYPE serial;
+
+create table user (
+id SERIAL PRIMARY KEY,
+make TEXT,
+model TEXT,
+year INTEGER,
+ownerId INTEGER
+);
+
+CREATE TABLE users (
+id SERIAL PRIMARY KEY,
+firstname TEXT,
+lastname TEXT,
+email TEXT
+);
+insert into users (firstname, lastname, email) values ( 'John', 'Smith', 'John@Smith.com');
+insert into users (firstname, lastname, email) values ( 'Dave', 'Davis', 'Dave@Davis.com');
+insert into users (firstname, lastname, email) values ( 'Jane', 'Janis', 'Jane@Janis.com');
